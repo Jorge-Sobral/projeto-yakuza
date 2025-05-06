@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+/*
+rgb(138, 15, 10) = média
+rgb(166, 13, 9) = clara
+rgb(51, 6, 3) = escura
+rgb(177, 15, 15) = outra clara
+rgb(95, 8, 5) = menos escura
+*/
+
+    :root {
+        --corclara: rgb(166, 13, 9);
+        --corclara2: rgb(177, 15, 15);
+        --cormedia: rgb(138, 15, 10);
+        --cormenosescura: rgb(95, 8, 5);
+        --corescura: rgb(51, 6, 3);
+
+        --fonte-padrao: Edo, Verdana, Geneva, Tahoma, sans-serif;
+        --fontedestaque: Edo;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+html {
+    color: white;
+}
+
+@font-face {
+    font-family: 'Edo';
+    src: url('Fonts/edosz.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--corescura);
+    font-family: var(--fonte-padrao);
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cormedia), var(--cormenosescura));
+    min-height: 150px;
+    padding-top: 40px;
+    
+}
+
+header > h1 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header > p {
+    color: white;
+    font-size: 1.em;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.037);
+}
+
+nav > a {
+    color: brown;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    transition-duration: 0.5s;
+}
+
+nav >a:hover {
+    background-color: var(--cormedia);
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: brown;
+    padding: 22px;
+    box-shadow: 0px 0px 10px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 821px;
+    display: block;
+    margin: auto;
+    margin: 15px 0px;
+}
+
+main h1 {
+    color: var(--corescura) ;
+    font-weight: bolder;
+    background-image: linear-gradient(to right, var(--cormedia), transparent);
+    padding: 2px 10px;
+}
+
+main h2 {
+    color: var(--corescura) ;
+    font-weight: bolder;
+    background-image: linear-gradient(to right, var(--cormedia), transparent);
+    padding: 2px 10px;
+}
+
+main h3 {
+    margin: 0px 0px 15px 0px;
+    text-align: justify;
+    line-height: 1em;
+    padding: 2px 10px;
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1em;
+    font-weight: lighter;
+}
+
+main strong {
+    color: var(--cormenosescura);
+    font-weight: bolder;
+}
+
+main ul {
+    list-style-position: inside;
+}
+
+main li {
+    margin: 15px 0px;
+    text-align: justify;
+    line-height: 1em;
+}
+
+div.video {
+    margin: 0px -22px 30px;
+    margin-bottom: 30px;
+    background-color: var(--cormenosescura);
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+aside {
+    margin: 15px 0px;
+    padding: 10px;
+    background-color: var(--cormedia);
+    border-radius: 10px;
+    font-weight: normal;
+}
+
+footer {
+    padding-left: 15px;
+    font-size: 0.8em;
+}
